@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Date        : 10 sept 2020>
+<!--Title       : User Setting Page Evalucreator
+<!--Description : by Dany Cadiou>
+<!--Use "Shift" + "Alt" +"F" to justify evething -->
+
+
+<head>
+
+    <title>User Setting</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <!-- External set up of style-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/styletable.css">
+
+    <!-- Internal set up of style-->
+    <style type="text/css">
+
+    </style>
+
+</head>
+
+<body>
+    <!--From template page-->
+    <div class="container" style="background-color: white;">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-custom" style="background-color: white;">
+
+            <a href="https://www.evalacademy.com/" target="_blank">
+                <img alt="Logo" src="../img/Eval_Academy_logo.png" height="70">
+            </a>
+            <!--<a class="navbar-brand" href="https://www.evalacademy.com/new-products">Menu</a>-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="./index.html">Home</a>
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a class="nav-link" href="./LoginPage.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./NewAccount.html">New Account</a>
+                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./UserSetting.html">Account Setting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./WelcomePage.html">Projects</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a>
+                            <form action="/logout" method="POST">
+                            <input type="submit"  class=" btn-xm" value="Logout" />
+                            </form>
+                        </a>
+                        <a href="https://twitter.com/EvalAcademy" target="_blank" class="fa fa-twitter"></a>
+                        <a href="https://www.linkedin.com/company/evalacademy" target="_blank"
+                            class="fa fa-linkedin"></a>
+                        <a href="https://www.facebook.com/EvaluationAcademy" target="_blank" class="fa fa-facebook"></a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--From template page-->
+    <div class="container header">
+        </br>
+        <h1>EvaluCreator</h1>
+        <h2>Evertyhing you need to create your Evaluation plan</h2>
+        </br>
+    </div>
+
+    <!--To develop-->
+    <div class="container main">
+        <br />
+        <h3 class="title">User Settings</h3>
+        <form action="/emailUpdate" method="POST">
+            <!--
+            <div>
+                <img src="#" alt="Avatar" class="rounded-circle">
+            </div>
+        -->
+            <div class="row">
+                <div class="form-group col">
+                    <label for="oldEmail" class="form-check-label">Old Email Address:</label>
+                    <input type="text" class="form-control" id="oldEmail" placeholder="Enter Old Email Address"
+                        name="oldEmail">
+                </div>
+
+                <div class="form-group col">
+                    <label for="newEmail" class="form-check-label">New Email Address:</label>
+                    <input type="text" class="form-control" id="newEmail" placeholder="Enter New Email Address"
+                        name="newEmail">
+                </div>
+            </div>
+            <div class="text-right">
+                <input type="submit" class="btn btn-primary" id="query" value="Update Email" />
+                <!--<input type="button" class="btn btn-primary" value="Update Email" onclick="window.location.href = './Welcome Page.html'" />-->
+            </div>
+            <br/>
+            <br/>
+            
+        </form>
+
+
+        <form action="/pwdUpdate" method="POST">
+        
+
+            <div class="row">
+                <div class="form-group col">
+                    <label for="opwd" class="form-check-label">Old Password:</label>
+                    <input type="text" class="form-control" id="opwd" placeholder="Enter Old Password" name="opwd">
+                </div>
+
+                <div class="form-group col">
+                    <label for="npwd" class="form-check-label">New Password:</label>
+                    <input type="text" class="form-control" id="npwd" placeholder="Enter New Password" name="npwd">
+                </div>
+
+                <div class="form-group col">
+                    <label for="cpwd" class="form-check-label">Confirm Password:</label>
+                    <input type="text" class="form-control" id="cpwd" placeholder="Confirm Password" name="cpwd" onchange="Validate2()">
+                </div>
+            </div>
+
+            </br>
+
+            <div class="text-right">
+                <input type="submit" class="btn btn-primary" id="query" value="Update Password" >
+                <!--<input type="button" class="btn btn-primary" value="Update Password" onclick="window.location.href = './Welcome Page.html'" />-->
+            </div>
+
+            <div id="error"></div>
+        </form>
+        </br>
+    </div>
+
+    <!--From template page-->
+    <div class="container footer">
+        <hr> <!-- defines a thematic break in an HTML page  -->
+        <a href="https://www.evalacademy.com/" target="_blank">
+            <img alt="Logo" src="../img/Eval_Academy_logo.png" height="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+        </a>
+
+        <a href="https://www.threehive.ca/our-team" target="_blank">
+            <img alt=" Three Hive Consulting Logo" src="../img/Three Hive .png"
+                height="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+        </a>
+        <a href="https://twitter.com/EvalAcademy" target="_blank" class="fa fa-twitter">&nbsp</a>
+        <a href="https://www.linkedin.com/company/evalacademy" target="_blank" class="fa fa-linkedin">&nbsp</a>
+        <a href="https://www.facebook.com/EvaluationAcademy" target="_blank" class="fa fa-facebook">&nbsp</a>
+        <a href="https://www.evalacademy.com/faqs"
+            target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbspFAQs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</a>
+        <a href="https://www.evalacademy.com/contact" target="_blank">Contact Us</a>
+    </div>
+
+    <script type="text/javascript">
+        function Validate2() {
+            var password = document.getElementById("npwd").value;
+            var confirmPassword = document.getElementById("cpwd").value;
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>

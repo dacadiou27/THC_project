@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Date        : 13 sept 2020>
+<!--Title       : Tools 2
+<!--Description : by Dany Cadiou>
+<!--Use "Shift" + "Alt" +"F" to justify evething -->
+
+
+<head>
+
+    <title>Theory</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+    <!-- External set up of style-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/styletable.css">
+
+    <!-- Internal set up of style-->
+    <style type="text/css">
+        .tooltiptext {
+            width: 20%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--From template page-->
+    <div class="container" style="background-color: white;">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-custom" style="background-color: white;">
+
+            <a href="https://www.evalacademy.com/">
+                <img alt="Logo" src="../img/Eval_Academy_logo.png" height="70">
+            </a>
+            <!--<a class="navbar-brand" href="https://www.evalacademy.com/new-products">Menu</a>-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./UserSetting.html">Account Setting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./WelcomePage.html">Projects</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav ml-auto">
+                    <a>
+                        <p id="HTMLSessionUser"></p>
+                    </a>
+                    <li class="nav-item">
+                        <a>
+                            <form action="/logout" method="POST">
+                            <input type="submit"  class=" btn-xm" value="Logout" />
+                            </form>
+                        </a>
+                        <a href="https://twitter.com/EvalAcademy" class="fa fa-twitter"></a>
+                        <a href="https://www.linkedin.com/company/evalacademy" class="fa fa-linkedin"></a>
+                        <a href="https://www.facebook.com/EvaluationAcademy" class="fa fa-facebook"></a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--From template page-->
+    <div class="container header">
+        </br>
+        <h1>EvaluCreator</h1>
+        <h2>Evertyhing you need to create your Evaluation plan</h2>
+        </br>
+    </div>
+
+    <!--To develop-->
+
+    <div class="container main">
+        <form action="/theory" method="POST">
+            <h3 class="title">Theory</h3>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="./Tool1.html" class="logo">
+                            <img alt="Logo" src="../img/1_Program.jpg" title="Program-Initiative Background"
+                                height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                        </a>
+                        <a href="./Tool2.html" class="logoactive">
+                            <img alt="Logo" src="../img/2_Program_Initiative.jpg" title="Program-Initiative Theory"
+                                height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                        </a>
+                        <a href="./Tool3.html" class="logo">
+                            <img alt="Logo" src="../img/3_evaluaiton_history.jpg" title="Evaluation History"
+                                height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                        </a>
+                        <a href="./Tool4.html" class="logo">
+                            <img alt="Logo" src="../img/4_Evalaution_Stakeholders.jpg" title="Evaluation Stakeholders"
+                                height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                        </a>
+                        <a href="./Tool5.html" class="logo">
+                            <img alt="Logo" src="../img/5_Evalaution_Purpose.png" title="Evaluation Purpose and Use"
+                                height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                        </a>
+                        <a href="./Tool6.html" class="logo">
+                            <img alt="Logo" src="../img/6_Evaluation_scope.jpg" title="Evaluation Scope"
+                                height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                        </a>
+                        <a href="./Tool7.html" class="logo">
+                            <img alt="Logo" src="../img/7_Data_Collection.jpg" title="Data Collection Plan"
+                                height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                        </a>
+                        <a href="./Tool8.html" class="logo">
+                            <img alt="Logo" src="../img/8_ethics.jpg" title="Ethics"
+                                height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                        </a>
+                        <a href="./Tool9.html" class="logo">
+                            <img alt="Logo" src="../img/9_Reporting.jpg" title="Reporting"
+                                height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="form-group">&nbsp
+                    <br />
+                    <label for="LogicMod" class="section">Logic Model or Theory of Change</label>
+                    <p>If a logic model or theory of change already exists, drop it in here! Otherwise, use this table
+                        to
+                        articulate the program’s inputs, activities, outputs and outcomes. You don’t have to measure
+                        everything in the logic model, but it will be helpful in developing evaluation questions and
+                        choosing indicators. </p>
+                    <!--<a href="http://theimprovegroup.com/blog/2018-06/ig-ology-logic-models " target="_blank">Click here
+                        for
+                        a logic model example</a>&nbsp<span>[Upload image, PDF, or Word doc of logic model]</span>-->
+
+                    <textarea class="form-control" id="LogicMod" rows="10" name="LogicMod"></textarea>
+                </div>
+
+
+                <div class="row">
+                    <br />
+                    <div class="col-lg">
+                        <div class="form-group">
+                            <br />
+                            <label for="Situation" class="section">Situation Statement </label>
+                            <p>Describe the current state or reason the program/intervention is necessary. Be
+                                concise—aim
+                                for less than three sentences.</p>
+                            <textarea class="form-control" id="Situation" rows="10" name="Situation"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="form-group">
+                            <br />
+                            <label for="Goal" class="section">Goal Statement</label>
+                            <p>Describe the intended end state, the changes you expect to see. Be concise—aim for less
+                                than
+                                three sentences.</p>
+                            <textarea class="form-control" id="Goal" rows="10" name="Goal"></textarea>
+
+                        </div>
+                    </div>
+
+                    <table id="TheoryTable" name="TheoryTable" class="table center">
+
+                        <thead class="thead-dark">
+                            <tr style="text-align:center">
+
+                                <th scope="col" style="width:15% " rowspan="2" class="align-middle">
+                                    <div class="tool">Inputs
+                                        <span class="tooltiptext"> Funding sources/ amounts, People, Infrastructure/
+                                            equipment/
+                                            supplies, Partner organizations, Program demand, Policies / procedures
+                                        </span>
+                                    </div>
+                                </th>
+                                <th scope="col" style="width:15% " rowspan="2" class="align-middle">
+                                    <div class="tool">
+                                        Activities
+                                        <span class="tooltiptext"> Activity area 1, Partnership building, Evaluation/
+                                            quality improvement,
+                                            Communication
+                                        </span>
+                                    </div>
+                                </th>
+                                <th scope="col" style="width:15% " rowspan="2" class="align-middle">
+                                    <div class="tool">
+                                        Ouputs
+                                        <span class="tooltiptext"> # of…, # of partners involved, # of meetings held, #
+                                            of
+                                            PDSA cycles, # of evaluation
+                                            reports produced, Website analytics, # newsletters created
+                                        </span>
+                                    </div>
+                                </th>
+                                <th scope="col" style="width:15% " colspan="3">Outcomes</th>
+                                <th scope="col" style="width:4% " colspan="1"></th>
+                            </tr>
+                            <tr style="text-align:center">
+                                <th scope="col" style="width:15%" rowspan="2">
+                                    <div class="tool">
+                                        Short Term Outcomes
+                                        <span class="tooltiptext"> Employees and leaders are …, Clients report …
+                                        </span>
+                                    </div>
+                                </th>
+                                <th scope="col" style="width:16%" rowspan="2">
+                                    <div class="tool">
+                                        Mid Term Outcomes
+                                        <span class="tooltiptext"> Children and youth continue to …, Clients remain
+                                            confident in …
+                                        </span>
+                                    </div>
+                                </th>
+                                <th scope="col" style="width:15%" rowspan="2">
+                                    <div class="tool">
+                                        Long Term Outcomes
+                                        <span class="tooltiptext"> Families are …, Community leaders demonstrate …
+                                        </span>
+                                    </div>
+                                </th>
+                                <th scope="col" style="width:4%" rowspan="1" class="align-middle"></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="1">
+                                    <textarea class="form-control" id="inputs" rows="1" placeholder="Inputs"></textarea>
+                                </td>
+                                <td colspan="1">
+                                    <textarea class="form-control" id="activities" rows="1"
+                                        placeholder="Activities"></textarea>
+                                </td>
+                                <td colspan="1">
+                                    <textarea class="form-control" id="ouputs" rows="1" placeholder="Ouputs"></textarea>
+                                </td>
+                                <td colspan="1">
+                                    <textarea class=" form-control" id="shortTerm" rows="1"
+                                        placeholder="Short Term"></textarea>
+                                </td>
+                                <td colspan="1">
+                                    <textarea class="form-control" id="midTerm" rows="1"
+                                        placeholder="Mid Term"></textarea>
+                                </td>
+                                <td colspan="1">
+                                    <textarea class="form-control" id="longTerm" rows="1"
+                                        placeholder="Long Term"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-right">
+                    <input type="button" class="btn" value="Add" onclick="addRow()" />
+                    <!--<input type="button" class="btn" value="Remove" onclick="deleteRow()" />-->
+                </div>
+
+                <script type="text/javascript">
+                    function addRow() {
+                        var table = document.getElementById("TheoryTable");
+                        //var row = table.insertRow(2);
+                        var row = table.insertRow(TheoryTable.rows.length-1);
+                        var cell1 = row.insertCell(0);
+                       //cell1.setAttribute('contentEditable', 'true');
+                        //cell1.setAttribute('name', 'activities');
+                        var cell2 = row.insertCell(1);
+                        //cell2.setAttribute('contentEditable', 'true');
+                        //cell2.setAttribute('name', 'inputs');
+                        var cell3 = row.insertCell(2);
+                        //cell3.setAttribute('contentEditable', 'true');
+                        //cell3.setAttribute('name', 'ouputs');
+                        var cell4 = row.insertCell(3);
+                        //cell4.setAttribute('contentEditable', 'true');
+                        //cell4.setAttribute('name', 'shortTerm');
+                        var cell5 = row.insertCell(4);
+                        //cell5.setAttribute('contentEditable', 'true');
+                        //cell5.setAttribute('name', 'midTerm');
+                        var cell6 = row.insertCell(5);
+                        //cell6.setAttribute('contentEditable', 'true');
+                        //cell6.setAttribute('name', 'longTerm');
+                        var cell7 = row.insertCell(6);
+
+                        //cell1.innerHTML = document.getElementById("inputs").value;
+                        //cell2.innerHTML = document.getElementById("activities").value;
+                        //cell3.innerHTML = document.getElementById("ouputs").value;
+                        //cell4.innerHTML = document.getElementById("shortTerm").value;
+                        //cell5.innerHTML = document.getElementById("midTerm").value;
+                        //cell6.innerHTML = document.getElementById("longTerm").value;
+
+                        cell1.innerHTML = "<input style='text-align: left;' type='text' class='form-control'  name='inputs' value='" + document.getElementById('inputs').value + "'>";
+                        cell2.innerHTML = "<input style='text-align: left;' type='text' class='form-control'  name='activities' value='" + document.getElementById("activities").value + "'>";
+                        cell3.innerHTML = "<input style='text-align: left;' type='text' class='form-control'  name='ouputs' value='" + document.getElementById("ouputs").value + "'>";
+                        cell4.innerHTML = "<input style='text-align: left;' type='text' class='form-control'  name='shortTerm' value='" + document.getElementById("shortTerm").value + "'>";
+                        cell5.innerHTML = "<input style='text-align: left;' type='text' class='form-control'  name='midTerm' value='" + document.getElementById("midTerm").value + "'>";
+                        cell6.innerHTML = "<input style='text-align: left;' type='text' class='form-control'  name='longTerm' value='" + document.getElementById("longTerm").value + "'>";
+                        cell7.innerHTML = "<input type='button' value='-' class='btn' onclick='deleteRow(this)'/>";
+                        
+                        // Erase & Reset to placeholder the entered value
+                        document.getElementById("inputs").value = "";
+                        document.getElementById("activities").value = "";
+                        document.getElementById("ouputs").value = "";
+                        document.getElementById("shortTerm").value = "";
+                        document.getElementById("midTerm").value = "";
+                        document.getElementById("longTerm").value = "";
+                    }
+
+                    function deleteRow(btn) {
+                        var row = btn.parentNode.parentNode;
+                        row.parentNode.removeChild(row);
+                    }
+
+                </script>
+
+                <!--
+                <ul>
+                    <lh class="section"></lh>
+                    <li><b>Inputs:</b> Funding sources/ amounts, People, Infrastructure/ equipment/ supplies, Partner
+                        organizations, Program demand, Policies / procedures</li>
+                    <li><b>Activities: </b> Activity area 1, Partnership building, Evaluation/ quality improvement,
+                        Communication</li>
+                    <li><b>Outputs: </b># of…, # of partners involved, # of meetings held, # of PDSA cycles, # of evaluation
+                        reports produced, Website analytics, # newsletters created</li>
+                    <li><b>Short term outcomes:</b> Employees and leaders are …, Clients report …</li>
+                    <li><b>Medium term outcomes:</b> Children and youth continue to …, Clients remain confident in …</li>
+                    <li><b>Long term outcomes:</b> Families are …, Community leaders demonstrate …</li>
+                </ul>
+                -->
+                <div class="form-group">
+                    <label for="Assumptions" class="section">Assumptions</label>
+                    <!--
+                <p>Discussing and documenting assumptions can help to avoid confusion later and may even lead you to
+                    some important evaluation questions. Below are some common assumptions to articulate. </p>-->
+
+                    <p>Assumptions – are conditions that are <b>currently true</b> and must <b>remain true</b> for the
+                        success of the program or initiative. If these conditions do not currently exist but need to
+                        occur for the success of the program, then the program should plan to implement activities that
+                        will influence the necessary change. For example, if sustained funding of an initiative is
+                        needed for an initiative to occur and funding is secured then ‘sustained funding’ would be an
+                        assumption. However, if funding has not been secured and it is needed for an initiative then
+                        ‘receiving sustained funding’ should be included in the logic model as an outcome with
+                        activities that outline how that will occur. </p>
+                    <textarea class="form-control" id="Assumptions" rows="5" name="Assumptions"></textarea>
+                </div>
+
+                <!--
+            <div class="row">
+                <div class="col-lg">
+                    <ul id="appropriateness">
+                        <div class="tool">
+                            <lh class="section">Appropriateness</lh>
+                            <span class="tooltiptext">e.g., Group sessions are an appropriate method to deliver
+                                services</span>
+                        </div>
+                        <li>
+                            <div class="form-group">
+                                <textarea class="form-control" id="appropriatenessItem" rows="1"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="text-right">
+                        <input type="button" class="btn" value="Add Item" onclick="addToList()" />
+                    </div>
+
+                    <script type="text/javascript">
+                        function addToList() {
+                            var ul = document.getElementById("appropriateness");
+                            var li = document.createElement("li");
+                            li.appendChild(document.createTextNode(document.getElementById("appropriatenessItem").value));
+                            ul.appendChild(li);
+                        }
+                    </script>
+
+                    <ul id="alignment">
+                        <div class="tool">
+                            <lh class="section">Alignment</lh>
+                            <span class="tooltiptext">e.g., This program is well aligned with the organization’s
+                                strategic plan<span>
+
+                        </div>
+                        <li>
+                            <div class="form-group">
+                                <textarea class="form-control" id="alignmentItem" rows="1"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="text-right">
+                        <input type="button" class="btn" value="Add Item" onclick="addToList2()" />
+                    </div>
+
+                    <script type="text/javascript">
+                        function addToList2() {
+                            var ul = document.getElementById("alignment");
+                            var li = document.createElement("li");
+                            li.appendChild(document.createTextNode(document.getElementById("alignmentItem").value));
+                            ul.appendChild(li);
+                        }
+                    </script>
+
+                    <ul id="demand">
+                        <div class="tool">
+                            <lh class="section">Demand</lh>
+                            <span class="tooltiptext">e.g., Referral volume will fluctuate over the first two
+                                quarters</span>
+                        </div>
+                        <li>
+                            <div class="form-group">
+                                <textarea class="form-control" id="demandItem" rows="1"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="text-right">
+                        <input type="button" class="btn" value="Add Item" onclick="addToList3()" />
+                    </div>
+
+                    <script type="text/javascript">
+                        function addToList3() {
+                            var ul = document.getElementById("demand");
+                            var li = document.createElement("li");
+                            li.appendChild(document.createTextNode(document.getElementById("demandItem").value));
+                            ul.appendChild(li);
+                        }
+                    </script>
+
+                    <ul id="infrastructure">
+                        <div class="tool">
+                            <lh class="section">Infrastructure</lh>
+                            <span class="tooltiptext">e.g., Adequate classroom space is available</span>
+                        </div>
+                        <li>
+                            <div class="form-group">
+                                <textarea class="form-control" id="infrastructureItem" rows="1"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="text-right">
+                        <input type="button" class="btn" value="Add Item" onclick="addToList4()" />
+                    </div>
+
+                    <script type="text/javascript">
+                        function addToList4() {
+                            var ul = document.getElementById("infrastructure");
+                            var li = document.createElement("li");
+                            li.appendChild(document.createTextNode(document.getElementById("infrastructureItem").value));
+                            ul.appendChild(li);
+                        }
+                    </script>
+
+
+
+                </div>
+                <div class="col-lg">
+                    <ul id="knowledge">
+                        <div class="tool">
+                            <lh class="section">Knowledge</lh>
+                            <span class="tooltiptext">e.g., With training, program staff will have the skills to deliver
+                                the program</span>
+                        </div>
+                        <li>
+                            <div class="form-group">
+                                <textarea class="form-control" id="knowledgeItem" rows="1"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="text-right">
+                        <input type="button" class="btn" value="Add Item" onclick="addToList5()" />
+                    </div>
+
+                    <script type="text/javascript">
+                        function addToList5() {
+                            var ul = document.getElementById("knowledge");
+                            var li = document.createElement("li");
+                            li.appendChild(document.createTextNode(document.getElementById("knowledgeItem").value));
+                            ul.appendChild(li);
+                        }
+                    </script>
+
+
+                    <ul id="resourcing">
+                        <div class="tool">
+                            <lh class="section">Resourcing</lh>
+                            <span class="tooltiptext">
+                                e.g., Funding will remain stable throughout the life of the program, Funding will remain
+                                stable throughout the life of the program
+                            </span>
+                        </div>
+                        <li>
+                            <div class="form-group">
+                                <textarea class="form-control" id="resourcingItem" rows="1"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="text-right">
+                        <input type="button" class="btn" value="Add Item" onclick="addToList6()" />
+                    </div>
+
+                    <script type="text/javascript">
+                        function addToList6() {
+                            var ul = document.getElementById("resourcing");
+                            var li = document.createElement("li");
+                            li.appendChild(document.createTextNode(document.getElementById("resourcingItem").value));
+                            ul.appendChild(li);
+                        }
+                    </script>
+
+                    <ul id="sponsorship">
+                        <div class="tool">
+                            <lh class="section">Sponsorship</lh>
+                            <span class="tooltiptext">e.g., Organizational leaders are supportive of this
+                                evaluation</span>
+                        </div>
+                        <li>
+                            <div class="form-group">
+                                <textarea class="form-control" id="sponsorshipItem" rows="1"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="text-right">
+                        <input type="button" class="btn" value="Add Item" onclick="addToList7()" />
+                    </div>
+
+                    <script type="text/javascript">
+                        function addToList7() {
+                            var ul = document.getElementById("sponsorship");
+                            var li = document.createElement("li");
+                            li.appendChild(document.createTextNode(document.getElementById("sponsorshipItem").value));
+                            ul.appendChild(li);
+                        }
+                    </script>
+
+                </div>
+            </div>
+-->
+
+                <div class="form-group">
+                    <br />
+                    <label for="Factors" class="section">External Factors</label>
+                    <p>External Factors – these are factors that are beyond the control of the initiative or program.
+                        Factors should be considered along with a risk mitigation strategy for the identified factors.
+                        External factors may include environmental, political, social, etc. </p>
+                    <textarea class="form-control" id="Factors" rows="5" name="Factors"></textarea>
+                </div>
+                <!--
+                <ul id="externalFactors">
+                </ul>
+
+            <div class="text-right">
+                <input type="button" class="btn" value="Add Item" onclick="addToList8()" />
+            </div>
+
+            <script type="text/javascript">
+                function addToList8() {
+                    var ul = document.getElementById("externalFactors");
+                    var li = document.createElement("li");
+                    var text = "External factor ";
+                    var i = document.getElementById("externalFactors").getElementsByTagName("li").length + 1;
+                    li.appendChild(document.createTextNode(text + i + " : " + document.getElementById("externalFactorsItem").value));
+                    ul.appendChild(li);
+                }
+            </script>
+
+            <p>You can’t control everything about the evaluation project, or the initiative you’re evaluating.
+                Writing down those factors that are beyond your control can help to set realistic expectations for
+                the evaluation. External factors may exert their power in the middle of your evaluation project, and
+                articulating them can help you to better prepare. Some common external factors include changes in
+                the political context – an election call may mean that you have to pause your work for several
+                weeks, or a swing to red or blue may signal impending changes to funding or project direction.
+                Weather or emergency situations are beyond the meagre evaluator’s control, but may have a huge
+                impact on your project. Staffing changes may mean that the people you are relying on to help collect
+                data or broker introductions are no longer available.</p>
+
+
+            <ul>
+                <lh class="Example">
+                    <p>Examples:
+                    <p>
+                </lh>
+                <li>
+                    <p>Federal or state/provincial/municipal funding priorities may shift over time</p>
+                </li>
+                <li>
+                    <p>Other local organizations may introduce/discontinue/modify programs of similar
+                        nature</p>
+                </li>
+                <li>
+                    <p>Political context – an election call may mean that you have to pause your work for
+                        several weeks</p>
+                </li>
+                <li>
+                    <p>Political context – a swing to red or blue may signal impending changes to funding
+                        or project
+                        direction</p>
+                </li>
+                <li>
+                    <p>Weather or emergency situations</p>
+                </li>
+                <li>
+                    <p>Staffing changes</p>
+                </li>
+                <li>
+                    <p>Pandemics</p>
+                </li>
+            </ul>
+-->
+
+            </div>
+            <div class="text-right">
+                <input type="submit" id="query" class="btn" value="Save" />
+            </div>
+            <div id="error"></div>
+        </form>
+    </div>
+
+    <!--From template page-->
+    <div class="container footer">
+        <hr> <!-- defines a thematic break in an HTML page  -->
+        <a href="https://www.evalacademy.com/">
+            <img alt="Logo" src="../img/Eval_Academy_logo.png" height="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+        </a>
+
+        <a href="https://www.threehive.ca/our-team">
+            <img alt=" Three Hive Consulting Logo" src="../img/Three Hive .png"
+                height="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+        </a>
+        <a href="https://twitter.com/EvalAcademy" class="fa fa-twitter">&nbsp</a>
+        <a href="https://www.linkedin.com/company/evalacademy" class="fa fa-linkedin">&nbsp</a>
+        <a href="https://www.facebook.com/EvaluationAcademy" class="fa fa-facebook">&nbsp</a>
+        <a href="https://www.evalacademy.com/faqs"
+            target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbspFAQs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</a>
+        <a href="https://www.evalacademy.com/contact" target="_blank">Contact Us</a>
+    </div>
+<!--
+    <script type="text/javascript">
+        function Login() {
+            //var userSession = "user1";
+            HTMLSessionUser.innerHTML = userSession;
+        }
+        window.onload = Login;
+    </script>-->
+</body>
+
+</html>

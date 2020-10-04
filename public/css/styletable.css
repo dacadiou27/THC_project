@@ -1,0 +1,30 @@
+.logo {
+  opacity: 35%;
+  text-align: center;
+}
+
+.logoactive {
+  text-align: center;
+}
+
+/*
+table {
+  border:solid 2px black;
+}
+*/
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  font-family: 'Tenor Sans', sans-serif;
+  /*font-size:large;*/
+}
+
+input[type="text"],input[type="date"],input[type="password"],textarea.form-control,option {
+  font-size: small;
+  font-family: 'Tenor Sans', sans-serif;
+}
+
