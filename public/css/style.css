@@ -91,6 +91,27 @@ a:hover {
     color: black
 }
 
+.btnicon{
+    border: 2px solid white;
+    background: white;
+    width: 75px; 
+    height: 70px;   
+}
+
+.btnicon:hover{
+    border: 2px solid black;
+    background: white;  
+}
+
+.btnproject{
+    border: 2px solid white;
+    background-color: none;
+}
+
+.btnproject:hover{
+    border: 2px solid black;
+}
+
 /* Checkbox */
 
 /* Icons */
@@ -139,7 +160,6 @@ a:hover {
 }
 
 .tooltiptext {
-
     visibility: hidden;
     width: 40%;
     background-color: black;
@@ -151,9 +171,22 @@ a:hover {
     margin-left: -20%;
 }
 
-
+.tooltiptexticon {
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+}
 
 .tool:hover .tooltiptext {
+    visibility: visible;
+    font-size: small;   
+    padding: 10px;
+}
+
+.tool:hover .tooltiptexticon {
     visibility: visible;
     font-size: small;   
     padding: 10px;

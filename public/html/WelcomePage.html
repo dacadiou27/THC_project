@@ -214,25 +214,28 @@
             </div>
 
             <div class="col-sm-8">
-                <form action="/" method="GET">
-                    <div style="text-align:center">
-                        </br>
-                        <h3 style="padding-top:10px;  " class="title">My Projects</h3>
-                        </br></br>
-                        <ul id="projectsList" style="list-style-type:none">
-                            <li><a href="./ToolsPage.html">Project A</a></li>
-                            </br></br>
-                            <li>Project B</li>
-                            </br></br>
-                            <li>Project C</li>
-                            </br></br>
-                            <li>Project D</li>
-                        </ul>
-                        </br></br>
-                        </br></br>
-                        <button type="button" class="btn btn-lg"><a href="./NewProject.html"> Start
-                                New Project</a></button>
-                    </div>
+                <div style="text-align:center">
+                    </br>
+                    <h3 style="padding-top:10px;  " class="title">My Projects</h3>
+                    </br></br>
+                    <ul id="projectsList" style="list-style-type:none">
+                        <%- liProject%>
+                    </ul>
+
+                    </br></br>
+                    <form action="/toolsPage" method="GET">
+                        <!--<input id="project" name="project" onChange="project();" type="text" />-->
+                        <!--<textarea class="form-control"  id="project" name="project" rows="1"></textarea>-->
+                        <!--<script>function project() { projectName = document.getElementById.project.value }</script>-->
+                        <button type="submit" class="btn btn-lg"><a> Select Project</a></button>
+                    </form>
+                    </br></br>
+                    <form action="/newProject" method="GET">
+                        <button type="submit" class="btn btn-lg"><a href="./NewProject.html"> Start New
+                                Project</a></button>
+                    </form>
+
+                </div>
             </div>
         </div>
     </div>
@@ -257,10 +260,5 @@
     </div>
 
 </body>
-
-<script>
-    var htmlString = document.getElementsByTagName('html')[0].innerHTML;
-    console.log(htmlString);
-</script>
 
 </html>

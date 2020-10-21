@@ -13,96 +13,78 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());//The request data and their response data will be formated in JSON form
 
+//let userSession = 'user1';
+//let projectName = 'projectU1';
+
 module.exports = function () {
 
-//let userSession = 'user1';
-let projectName = 'projectU1';
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/public/html/Tool1.html'));
+  app.get('/Tool1Get', function (req, res) {
+    // connect to your database
+    sql.connect(config, function (err) {
+      if (err) console.log(err);
+      //// create Request object
+      var sqlRequest = new sql.Request();
+      let sqlQuery = "SELECT Background FROM dbo.Projects WHERE UserName = '" + userSession + "' AND ProjectName ='" + projectName + "';";
+      //console.log(sqlQuery);
 
-  res.send(req.query.userNameSession) = userSession;
 
-  // connect to your database
+      sqlRequest.query(sqlQuery, function (err, data) {
+        if (err) console.log(err)
+        //console.log(data + " data from SQL");
+        //console.log(data.recordset[0].Background + " data - background from SQL");
+        let backgroundData = data.recordset[0].Background;
 
-  sql.connect(config, function (err) {
+        if (data) {
+          let startHTML = '<!DOCTYPE html><html lang="en"><!--Date : 13 sept 2020><!--Title : Tools 1<!--Description : by Dany Cadiou><!--Use "Shift" + "Alt" +"F" to justify evething --><head> <title>Background</title> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet"> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"> <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> <!-- External set up of style--> <link rel="stylesheet" type="text/css" href="../css/style.css"> <link rel="stylesheet" type="text/css" href="../css/styletable.css"> <!-- Internal set up of style--> <style type="text/css"> </style></head><body> <!--From template page--> <div class="container" style="background-color: white;"> <nav class="navbar navbar-expand-lg navbar-light bg-custom" style="background-color: white;"> <a href="https://www.evalacademy.com/"> <img alt="Logo" src="../img/Eval_Academy_logo.png" height="70"> </a> <!--<a class="navbar-brand" href="https://www.evalacademy.com/new-products">Menu</a>--> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="navbarNavDropdown"> <ul class="nav navbar-nav ml-auto"> <li class="nav-item "> <a class="nav-link active" href="./index.html">Home</a> </li> <li class="nav-item"> <a class="nav-link" href="./UserSetting.html">Account Setting</a> </li> <li class="nav-item"> <a class="nav-link" href="./WelcomePage.html">Projects</a> </li> </ul> <ul class="nav navbar-nav ml-auto"> <li class="nav-item"> <a> <form action="/logout" method="POST"> <input type="submit" class=" btn-xm" value="Logout" /> </form> </a> <a href="https://twitter.com/EvalAcademy" class="fa fa-twitter"></a> <a href="https://www.linkedin.com/company/evalacademy" class="fa fa-linkedin"></a> <a href="https://www.facebook.com/EvaluationAcademy" class="fa fa-facebook"></a> </li> </ul> </div> </nav> </div> <!--From template page--> <div class="container header"> </br> <h1>EvaluCreator</h1> <h2>Evertyhing you need to create your Evaluation plan</h2> </br> </div> <!--To develop--> <div class="container main"> <h3 class="title">Background</h3> <div> <ul class="nav navbar-nav"> <li class="nav-item, display: inline;"> <table> <tr> <th> <div class="tool"> <form action="/Tool1Get" method="GET"> <button type="submit" name="" value="" class="btnicon logoactive"><img src="../img/1_Program.jpg" alt="Tool1" height="50"></button> </form> <span class="tooltiptexticon">Background</span> </div> </th> <th> <div class="tool"> <form action="/Tool2Get" method="GET"> <button type="submit" name="" value="" class="btnicon logo"><img src="../img/2_Program_Initiative.jpg" alt="Tool2" height="50"></button> </form> <span class="tooltiptexticon">Initiative</span> </div> </th> <th> <div class="tool"> <form action="/Tool3Get" method="GET"> <button type="submit" name="" value="" class="btnicon logo"><img src="../img/3_evaluaiton_history.jpg" alt="Tool3" height="50"></button> </form> <span class="tooltiptexticon">History</span> </div> </th> <th> <div class="tool"> <form action="/Tool4Get" method="GET"> <button type="submit" name="" value="" class="btnicon logo"><img src="../img/4_Evalaution_Stakeholders.jpg" alt="Tool4" height="50"></button> </form> <span class="tooltiptexticon">Stakeholders</span> </div> </th> <th> <div class="tool"> <form action="/Tool5Get" method="GET"> <button type="submit" name="" value="" class="btnicon logo"><img src="../img/5_Evalaution_Purpose.png" alt="Tool5" height="50"></button> </form> <span class="tooltiptexticon">Purpose</span> </div> </th> <th> <div class="tool"> <form action="/Tool6Get" method="GET"> <button type="submit" name="" value="" class="btnicon logo"><img src="../img/6_Evaluation_scope.jpg" alt="Tool5" height="50"></button> </form> <span class="tooltiptexticon">Scope</span> </div> </th> <th> <div class="tool"> <form action="/Tool7Get" method="GET"> <button type="submit" name="" value="" class="btnicon logo"><img src="../img/7_Data_Collection.jpg" alt="Tool7" height="50"></button> </form> <span class="tooltiptexticon">Data</span> </div> </th> <th> <div class="tool"> <form action="/Tool8Get" method="GET"> <button type="submit" name="" value="" class="btnicon logo"><img src="../img/8_ethics.jpg" alt="Tool8" height="50"></button> </form> <span class="tooltiptexticon">Ethics</span> </div> </th> <th> <div class="tool"> <form action="/Tool9Get" method="GET"> <button type="submit" name="" value="" class="btnicon logo"><img src="../img/9_Reporting.jpg" alt="Tool9" height="50"></button> </form> <span class="tooltiptexticon">Reporting</span> </div> </th> <th> <form action="/viewDocument" method="GET"> <th colspan="3" style="text-align: center"> <button type="submit" class="btn">Preview</button> </th> </form> </th> </tr> </table> </li> </ul> </div> <form action="/background" method="POST"> <div class="form-group"> <br /> <div class="tool"> <label for="Background" class="section">Background</label> <p>The background section orients the reader to the program/initiative that is being evaluated and identifies the initiative’s history, including when, where, why and for whom it was started.</p> </div> <p id="InfoFromDB"></p> <br /> <textarea class="form-control" id="bgrd" rows="10" name="bgrd">';
+          let endHTML = '</textarea> <br /> <br /> </div> <div class="text-right"> <!--<input type="button" class="btn" value="Save" />--> <input type="submit" id="query" class="btn" value="Save" /> </div> <div id="error"></div> </form> </div> <!--From template page--> <div class="container footer"> <hr> <!-- defines a thematic break in an HTML page --> <a href="https://www.evalacademy.com/"> <img alt="Logo" src="../img/Eval_Academy_logo.png" height="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp </a> <a href="https://www.threehive.ca/our-team"> <img alt=" Three Hive Consulting Logo" src="../img/Three Hive .png" height="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp </a> <a href="https://twitter.com/EvalAcademy" class="fa fa-twitter">&nbsp</a> <a href="https://www.linkedin.com/company/evalacademy" class="fa fa-linkedin">&nbsp</a> <a href="https://www.facebook.com/EvaluationAcademy" class="fa fa-facebook">&nbsp</a> <a href="https://www.evalacademy.com/faqs" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbspFAQs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</a> <a href="https://www.evalacademy.com/contact" target="_blank">Contact Us</a> </div> </body></html>'
+          let pageHTML = startHTML + backgroundData + endHTML;
+          res.send(pageHTML);
+          sql.close();
+        }
 
-    if (err) console.log(err);
+        else {
+          res.sendFile(path.join(__dirname + '/public/html/Tool1.html'));
+        }
 
-    // create Request object
-    var sqlRequest = new sql.Request();
-
-    let sqlQuery = "SELECT Background FROM dbo.Projects WHERE UserName = '" + userSession + "' AND ProjectName ='" + projectName + "';";
-    //  console.log(sqlQuery);
-
-    sqlRequest.query(sqlQuery, function (err, data) {
-      if (err) console.log(err)
-
-      console.log(data + " data from SQL");
-      console.log(data.recordset[0].Background + " data - background from SQL");
-
-      //req.params.bgrd = data.recordset[0].Background;
-     // req.params.InfoFromDB = data.recordset[0].Background;
-
-      //var name=document.getElementById('Background2')
-
-      //    if (data.recordset[0].Background) {
-      //      document.getElementById("bgrd").innerHTML="text area";
-      //document.getElementById("bgrd").value = data.recordset[0].Background;
-      //bgrd.innerHTML = "text area";
-      //document.getElementById("bgrd").value = "text area";
-      //document.getElementById('Background2')=data.recordset[0].Background;
-      //document.Background2.value=data.recordset[0].Background;
-      //name=data.recordset[0].Background;
-      // req.body.Background2 = data.recordset[0].Background;
-      //}
-
-      //  else {
-      //    res.send('Incorrect Input!');
-      //  } res.end();
-
-      sql.close();
+      });
     });
   });
-});
 
-app.post('/background', function (req, res) {
-  console.log("Welcome " + userSession + " from Tool1 Page!")
-  //res.send(req.body.userNameSession)=userSession;
+  app.post('/background', function (req, res) {
+    console.log("Welcome " + userSession + " from Tool1 Page!")
+    //res.send(req.body.userNameSession)=userSession;
 
-  // connect to your database
-  sql.connect(config, function (err) {
+    // connect to your database
+    sql.connect(config, function (err) {
 
-    if (err) console.log(err);
+      if (err) console.log(err);
 
-    // create Request object
-    var sqlRequest = new sql.Request();
+      // create Request object
+      var sqlRequest = new sql.Request();
 
-    let backgroundHTML = req.body.bgrd;
+      let backgroundHTML = req.body.bgrd;
 
-    console.log(backgroundHTML + ' from HTML');
+      console.log(backgroundHTML + ' from HTML');
 
-    let sqlQuery = "UPDATE dbo.Projects SET Background = '" + backgroundHTML + "' WHERE UserName = '" + userSession + "' AND ProjectName ='" + projectName + "';";
-    console.log(sqlQuery);
+      let sqlQuery = "UPDATE dbo.Projects SET Background = '" + backgroundHTML + "' WHERE UserName = '" + userSession + "' AND ProjectName ='" + projectName + "';";
+      console.log(sqlQuery);
 
-    sqlRequest.query(sqlQuery, function (err, data) {
-      if (err) console.log(err)
-      console.log(data);
+      sqlRequest.query(sqlQuery, function (err, data) {
+        if (err) console.log(err)
+        console.log(data);
 
-      if (data) {
-        res.redirect('/html/Tool1.html');
-        
-       // res.send(req.body.userNameSession) = userSession;
-       // res.send(req.body.bgrd) = userSession;
-      }
-      else {
-        res.send('Incorrect Input!');
-      } res.end();
+        //if (data) {
+        //  res.redirect('/html/Tool1.html');
+        //}
+        //else {
+        //  res.send('Incorrect Input!');
+        //} res.end();
 
-      sql.close();
+        sql.close();
+      });
     });
   });
-});
 
   return app;
 };

@@ -7,6 +7,7 @@ const config = require('./config.js');
 const app = express();
 
 app.use(express.static(path.join(__dirname + '/public')));
+app.use(express.static(path.join(__dirname + '/public/html')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -32,12 +33,11 @@ module.exports = function () {
 
       let sqlQuery = "UPDATE dbo.Users SET Email = '" + newEmail + "' WHERE Email = '" + oldEmail + "' ;";
 
-
-      console.log(sqlQuery);
+      //console.log(sqlQuery);
 
       sqlRequest.query(sqlQuery, function (err, data) {
         if (err) console.log(err)
-        console.log(data);
+        //console.log(data);
 
         if (data) { res.redirect('/html/WelcomePage.html') }
         else {
@@ -62,15 +62,15 @@ module.exports = function () {
 
       let npwd = req.body.npwd;
       let opwd = req.body.opwd;
-      let cpwd = req.body.cpwd;
+      //let cpwd = req.body.cpwd;
 
       let sqlQuery = "UPDATE dbo.Users SET UserPassword = '" + npwd + "' WHERE UserPassword = '" + opwd + "' ;";
       //UPDATE dbo.Users SET UserPassword = 'pwd1other' WHERE UserPassword = 'undefined' ; DO NOT WORK due to old pasword is not capture
-      console.log(sqlQuery);
+      //console.log(sqlQuery);
 
       sqlRequest.query(sqlQuery, function (err, data) {
         if (err) console.log(err)
-        console.log(data);
+        //console.log(data);
 
         if (data) { res.redirect('/html/WelcomePage.html') }
         else {

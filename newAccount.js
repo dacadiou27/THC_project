@@ -7,6 +7,7 @@ const config = require('./config.js');
 const app = express();
 
 app.use(express.static(path.join(__dirname + '/public')));
+app.use(express.static(path.join(__dirname + '/public/html')));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -41,23 +42,19 @@ module.exports = function () {
       let organization = req.body.organization;
       let orgtype = req.body.orgtype;
 
-      //////
-      //let sqlQuery = " INSERT INTO dbo.Users (UserName, FirstName, LastName, UserPassword, Email, OrgName, OrgType) VALUES ('" + username + "', '" + fname +"');";
       let sqlQuery = " INSERT INTO dbo.Users (UserName, FirstName, LastName, UserPassword, Email, OrgName, OrgType) VALUES ('" + username + "', '" + fname + "', '" + lname + "', '" + pwd + "', '" + email + "', '" + organization + "', '" + orgtype + "');";
-
-
-      console.log(sqlQuery);
+      //console.log(sqlQuery);
       //to remove in production version if not I will expose the password of the user
       sqlRequest.query(sqlQuery, function (err, data) {
         if (err) console.log(err)
-        console.log(data);
+        //console.log(data);
 
         if (data) { 
           userSession = username;
           res.redirect('/html/WelcomePage.html');
          }
         else {
-          res.send('Incorrect Input!');
+          res.send('Username / email address already in use or Incorrect Input!');
         } res.end();
 
         sql.close();

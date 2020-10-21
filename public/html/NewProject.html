@@ -36,69 +36,70 @@
 </head>
 
 <body>
-        <!--From template page-->
-        <div class="container" style="background-color: white;">
+    <!--From template page-->
+    <div class="container" style="background-color: white;">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-custom" style="background-color: white;">
-    
-                <a href="https://www.evalacademy.com/" target="_blank">
-                    <img alt="Logo" src="../img/Eval_Academy_logo.png" height="70">
-                </a>
-                <!--<a class="navbar-brand" href="https://www.evalacademy.com/new-products">Menu</a>-->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-    
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item ">
-                            <a class="nav-link active" href="./index.html">Home</a>
-                        </li>
-                        <!--
+        <nav class="navbar navbar-expand-lg navbar-light bg-custom" style="background-color: white;">
+
+            <a href="https://www.evalacademy.com/" target="_blank">
+                <img alt="Logo" src="../img/Eval_Academy_logo.png" height="70">
+            </a>
+            <!--<a class="navbar-brand" href="https://www.evalacademy.com/new-products">Menu</a>-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="./index.html">Home</a>
+                    </li>
+                    <!--
                         <li class="nav-item">
                             <a class="nav-link" href="./LoginPage.html">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./NewAccount.html">New Account</a>
                         </li>-->
-                        <li class="nav-item">
-                            <a class="nav-link" href="./UserSetting.html">Account Setting</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./WelcomePage.html">Projects</a>
-                        </li>
-                    </ul>
-    
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a>
-                                <form action="/logout" method="POST">
-                                <input type="submit"  class=" btn-xm" value="Logout" />
-                                </form>
-                            </a>
-                            <a href="https://twitter.com/EvalAcademy" target="_blank" class="fa fa-twitter"></a>
-                            <a href="https://www.linkedin.com/company/evalacademy" target="_blank" class="fa fa-linkedin"></a>
-                            <a href="https://www.facebook.com/EvaluationAcademy" target="_blank" class="fa fa-facebook"></a>
-                        </li>
-    
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    
-        <!--From template page-->
-        <div class="container header">
-            </br>
-            <h1>EvaluCreator</h1>
-            <h2>Evertyhing you need to create your Evaluation plan</h2>
-            </br>
-        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./UserSetting.html">Account Setting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./WelcomePage.html">Projects</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a>
+                            <form action="/logout" method="POST">
+                                <input type="submit" class=" btn-xm" value="Logout" />
+                            </form>
+                        </a>
+                        <a href="https://twitter.com/EvalAcademy" target="_blank" class="fa fa-twitter"></a>
+                        <a href="https://www.linkedin.com/company/evalacademy" target="_blank"
+                            class="fa fa-linkedin"></a>
+                        <a href="https://www.facebook.com/EvaluationAcademy" target="_blank" class="fa fa-facebook"></a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--From template page-->
+    <div class="container header">
+        </br>
+        <h1>EvaluCreator</h1>
+        <h2>Evertyhing you need to create your Evaluation plan</h2>
+        </br>
+    </div>
 
 
     <!--To develop-->
     <div class="container main">
-        <br/>
+        <br />
         <h3 class="title">New Project</h3>
         <form action="/newProject" method="post">
             <!--The form-handler is typically a file on the server with a script for processing 
@@ -116,8 +117,14 @@
                 <label for="dateStarted" class="form-check-label">Date Started:</label>
                 <input type="Date" class="form-control" id="dateStarted" placeholder="DD-MM-YYYY" name="dateStarted">
             </div>
+            <input type="reset" class="btn" value="Reset Form">
+            <!--<input type="button" class="btn" value="Create Project" onclick="window.location.href = './ToolsPage.html'" />-->
+            <input type="submit" id="query" class="btn" value="Create Project" />
+            <!--The <input type="submit"> defines a button for submitting the form data to a form-handler.-->
+    </div>
+    </form>
 
-            <h3>Collaborators</h3>
+    <!--<h3>Collaborators</h3>
 
             <div class="form-group">
                 <label for="collaboratorfn" class="form-check-label">First Name:</label>
@@ -139,15 +146,17 @@
             <br>
             <div class="text-center">
                 <input type="reset" class="btn" value="Reset Form">
-                <!--<input type="button" class="btn" value="Create Project" onclick="window.location.href = './ToolsPage.html'" />-->
-                <input type="submit" id="query" class="btn" value="Create Project"/>
-                <!--The <input type="submit"> defines a button for submitting the form data to a form-handler.-->
+                <input type="button" class="btn" value="Create Project" onclick="window.location.href = './ToolsPage.html'" />
+               <input type="submit" id="query" class="btn" value="Create Project"/>
+                The <input type="submit"> defines a button for submitting the form data to a form-handler.
             </div>
-        </form>
-        <br><hr>
+        </form>-->
+
+    <br>
+    <hr>
     </div>
 
-    <!--From template page-->    
+    <!--From template page-->
     <div class="container footer">
         <h1></h1>
         <a href="https://www.evalacademy.com/">

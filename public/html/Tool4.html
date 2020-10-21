@@ -20,9 +20,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
 
 
     <!-- External set up of style-->
@@ -32,6 +34,9 @@
     <!-- Internal set up of style-->
     <style type="text/css">
     </style>
+
+    <!-- External scripts-->
+    <script type="text/javascript" src="../js/table.js"></script>
 
 </head>
 
@@ -87,43 +92,93 @@
         <h3 class="title">Stakeholder Matrix</h3>
         <div>
             <ul class="nav navbar-nav">
-                <li class="nav-item">
-                    <a href="./Tool1.html" class="logo">
-                        <img alt="Logo" src="../img/1_Program.jpg" title="Program-Initiative Background"
-                            height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                    </a>
-                    <a href="./Tool2.html" class="logo">
-                        <img alt="Logo" src="../img/2_Program_Initiative.jpg" title="Program-Initiative Theory"
-                            height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                    </a>
-                    <a href="./Tool3.html" class="logo">
-                        <img alt="Logo" src="../img/3_evaluaiton_history.jpg" title="Evaluation History"
-                            height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                    </a>
-                    <a href="./Tool4.html" class="logoactive">
-                        <img alt="Logo" src="../img/4_Evalaution_Stakeholders.jpg" title="Evaluation Stakeholders"
-                            height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                    </a>
-                    <a href="./Tool5.html" class="logo">
-                        <img alt="Logo" src="../img/5_Evalaution_Purpose.png" title="Evaluation Purpose and Use"
-                            height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                    </a>
-                    <a href="./Tool6.html" class="logo">
-                        <img alt="Logo" src="../img/6_Evaluation_scope.jpg" title="Evaluation Scope"
-                            height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                    </a>
-                    <a href="./Tool7.html" class="logo">
-                        <img alt="Logo" src="../img/7_Data_Collection.jpg" title="Data Collection Plan"
-                            height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                    </a>
-                    <a href="./Tool8.html" class="logo">
-                        <img alt="Logo" src="../img/8_ethics.jpg" title="Ethics"
-                            height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                    </a>
-                    <a href="./Tool9.html" class="logo">
-                        <img alt="Logo" src="../img/9_Reporting.jpg" title="Reporting"
-                            height="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                    </a>
+                <li class="nav-item, display: inline;">
+                    <table>
+                        <tr>
+                            <th>
+                                <div class="tool">
+                                    <form action="/Tool1Get" method="GET">
+                                        <button type="submit" name="" value="" class="btnicon logo"><img
+                                                src="../img/1_Program.jpg" alt="Tool1" height="50"></button>
+                                    </form>
+                                    <span class="tooltiptexticon">Background</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="tool">
+                                    <form action="/Tool2Get" method="GET">
+                                        <button type="submit" name="" value="" class="btnicon logo"><img
+                                                src="../img/2_Program_Initiative.jpg" alt="Tool2" height="50"></button>
+                                    </form>
+                                    <span class="tooltiptexticon">Initiative</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="tool">
+                                    <form action="/Tool3Get" method="GET">
+                                        <button type="submit" name="" value="" class="btnicon logo"><img
+                                                src="../img/3_evaluaiton_history.jpg" alt="Tool3" height="50"></button>
+                                    </form>
+                                    <span class="tooltiptexticon">History</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="tool">
+                                    <form action="/Tool4Get" method="GET">
+                                        <button type="submit" name="" value="" class="btnicon logoactive"><img
+                                                src="../img/4_Evalaution_Stakeholders.jpg" alt="Tool4"
+                                                height="50"></button>
+                                    </form>
+                                    <span class="tooltiptexticon">Stakeholders</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="tool">
+                                    <form action="/Tool5Get" method="GET">
+                                        <button type="submit" name="" value="" class="btnicon logo"><img
+                                                src="../img/5_Evalaution_Purpose.png" alt="Tool5" height="50"></button>
+                                    </form>
+                                    <span class="tooltiptexticon">Purpose</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="tool">
+                                    <form action="/Tool6Get" method="GET">
+                                        <button type="submit" name="" value="" class="btnicon logo"><img
+                                                src="../img/6_Evaluation_scope.jpg" alt="Tool5" height="50"></button>
+                                    </form>
+                                    <span class="tooltiptexticon">Scope</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="tool">
+                                    <form action="/Tool7Get" method="GET">
+                                        <button type="submit" name="" value="" class="btnicon logo"><img
+                                                src="../img/7_Data_Collection.jpg" alt="Tool7" height="50"></button>
+                                    </form>
+                                    <span class="tooltiptexticon">Data</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="tool">
+                                    <form action="/Tool8Get" method="GET">
+                                        <button type="submit" name="" value="" class="btnicon logo"><img
+                                                src="../img/8_ethics.jpg" alt="Tool8" height="50"></button>
+                                    </form>
+                                    <span class="tooltiptexticon">Ethics</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="tool">
+                                    <form action="/Tool9Get" method="GET">
+                                        <button type="submit" name="" value="" class="btnicon logo"><img
+                                                src="../img/9_Reporting.jpg" alt="Tool9" height="50"></button>
+                                    </form>
+                                    <span class="tooltiptexticon">Reporting</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
                 </li>
             </ul>
         </div>
@@ -134,7 +189,6 @@
                 <label for="Stakeholder" class="section">Stakeholder</label>
                 <!----Form----->
                 <form action="/stakeholders" method="POST">
-                    <!--<fieldset>-->
                     <table id="stakeholderTable" class="table center">
                         <thead class="thead-dark">
                             <tr style="text-align:center">
@@ -142,7 +196,8 @@
                                 <th scope="col" style="width:19%">Stakeholder Names</th>
                                 <th scope="col" style="width:19%">Stakeholder Purpose/Use</th>
                                 <th scope="col" style="width:19%">Stakeholder Nature of Involvement</th>
-                                <th scope="col" style="width:19%">Primary Intended User(s)</th>                                
+                                <th scope="col" style="width:19%">Primary Intended User(s)</th>
+                                <th scope="col" style="width:5%"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -169,7 +224,7 @@
                                 </td>
                                 <td>
                                     <!--Stakeholder Purpose/Use-->
-                                    <select name="demoSel[]" id="demoSel" size="4" multiple>
+                                    <select name="selPurpose[]" id="selPurpose" size="4" multiple>
                                         <option value="Accountability">Accountability</option>
                                         <option value="Advocacy">Advocacy</option>
                                         <option value="Development">Development</option>
@@ -179,15 +234,15 @@
                                         <option value="Policy Development">Policy Development</option><br>
                                         <option value="Resource Allocation">Resource Allocation</option><br>
                                         <option value="Other (specify)">Other (specify)</option>
-                                        <div>
-                                            <textarea name="display" id="display" placeholder="" cols="26" rows="4"
-                                                readonly></textarea> <br>                                            
-                                        </div>
-                                    </select>                                    
+                                        <textarea name="output" id="output" placeholder="" cols="26" rows="4"
+                                            readonly></textarea> <br>
+                                        <button type="button" class="btn" onclick="showChoicesPurpose()">Select
+                                            Purpose/Use</button>
+                                    </select>
                                 </td>
                                 <td>
                                     <!--Stakeholder Nature of Involvement-->
-                                    <select name="demoSel[]" id="demoSel2" size="4" multiple>
+                                    <select name="selNature[]" id="selNature" size="4" multiple>
                                         <option value="Inform evaluation">Inform evaluation</option>
                                         <option value="Advise on methodology">Advise on methodology</option>
                                         <option value="Collect data">Collect data</option>
@@ -201,11 +256,10 @@
                                         <option value="Participate in data collection">Participate in data
                                             collection</option><br>
                                         <option value="Other">Other (specify)</option><br>
-
-                                        <div>
-                                            <textarea name="display2" id="display2" placeholder="" cols="35" rows="4"
-                                                readonly></textarea> <br>                                           
-                                        </div>
+                                        <textarea name="output2" id="output2" placeholder="" cols="26" rows="4"
+                                            readonly></textarea> <br>
+                                        <button type="button" class="btn" onclick="showChoicesNature()">Select Nature of
+                                            Involvement</button>
                                     </select>
                                 </td>
                                 <td>
@@ -224,133 +278,8 @@
                         <input type="submit" id="query" class="btn" value="Save" />
                     </div>
                     <br>
-                    <!--</fieldset>-->
                 </form>
                 <br>
-
-                <!----scripts----->
-                <script type="text/javascript">
-                    (function () {
-                        function getSelectedOptions(sel, fn) {
-                            var opts = [], opt;
-                            for (var i = 0, len = sel.options.length; i < len; i++) {
-                                opt = sel.options[i];
-                                if (opt.selected) {
-                                    opts.push(opt);
-                                    if (fn) {
-                                        fn(opt);
-                                    }
-                                }
-                            }
-                            return opts;
-                        }
-                        //This code displays selection in test area: optional 
-                        document.getElementById('demoSel').onchange = function (e) {
-                            var display = document.getElementById('display');
-                            display.innerHTML = '';
-
-                            getSelectedOptions(this, callback);
-
-                            var str = display.innerHTML.slice(0, -2);
-                            display.innerHTML = str;
-                        };
-
-                        function callback(opt) {
-                            var display = document.getElementById('display');
-                            display.innerHTML += opt.value + ', ';
-                        }
-                    }());
-
-                </script>
-
-                <script type="text/javascript">
-                    (function () {
-                        function getSelectedOptions(sel, fn) {
-                            var opts = [], opt;
-                            for (var i = 0, len = sel.options.length; i < len; i++) {
-                                opt = sel.options[i];
-                                if (opt.selected) {
-                                    opts.push(opt);
-                                    if (fn) {
-                                        fn(opt);
-                                    }
-                                }
-                            }
-                            return opts;
-                        }
-                        document.getElementById('demoSel2').onchange = function (e) {
-                            var display = document.getElementById('display2');
-                            display.innerHTML = '';
-
-                            getSelectedOptions(this, callback);
-
-                            var str = display.innerHTML.slice(0, -2);
-                            display.innerHTML = str;
-                        };
-
-                        function callback(opt) {
-                            var display = document.getElementById('display2');
-                            display.innerHTML += opt.value + ', ';
-                        }
-                    }());
-
-                </script>
-
-                <script>
-                    jQuery(document).ready(function ($) {
-                        $('input.other_enable_cb').change(function () {
-                            if ($(this).is(':checked')) $(this).parent().children('div.other_select').show();
-                            else $(this).parent().children('div.other_select').hide();
-                        }).change();
-                    });
-                </script>
-
-                <script type="text/javascript">
-                    function addRow() {
-                        var table = document.getElementById("stakeholderTable");
-                        var row = table.insertRow(stakeholderTable.rows.length - 1);
-                        var cell1 = row.insertCell(0);
-                        //cell1.setAttribute('contentEditable', 'true');
-                        var cell2 = row.insertCell(1);
-                        //cell2.setAttribute('contentEditable', 'true');
-                        var cell3 = row.insertCell(2);
-                        //cell3.setAttribute('contentEditable', 'true');
-                        var cell4 = row.insertCell(3);
-                        //cell4.setAttribute('contentEditable', 'true');
-                        var cell5 = row.insertCell(4);
-                        //cell5.setAttribute('contentEditable', 'true');
-                        var cell6 = row.insertCell(5);
-                        //var cell7 = row.insertCell(6);
-
-                        //cell1.innerHTML = document.getElementById("stakeholderTypes").value;
-                        //cell2.innerHTML = document.getElementById("stakeholderNames").value;
-                        //cell3.innerHTML = document.getElementById("Purpose").value;
-                        //cell3.innerHTML = document.getElementById("display").value;
-                        //cell4.innerHTML = document.getElementById("natureOfInvolvement").value;
-                        //cell5.innerHTML = document.getElementById("PrimIntUser").value;
-
-                        cell1.innerHTML = "<input style='text-align: left;' type='text' class='form-control'  name='stakeholderTypes' value='" + document.getElementById("stakeholderTypes").value + "'>";
-                        cell2.innerHTML = "<input style='text-align: left;' type='text' class='form-control'  name='stakeholderNames' value='" + document.getElementById("stakeholderNames").value + "'>";
-                        cell3.innerHTML = "<input style='text-align: left;' type='text' class='form-control'  name='stakeholderPurp' value='" + document.getElementById("display").value + "'>";
-                        cell4.innerHTML = "<input style='text-align: left;' type='text' class='form-control'  name='stakeholderNat' value='" + document.getElementById("display2").value + "'>";
-                        cell5.innerHTML = "<input style='text-align: left;' type='text' class='form-control'  name='primIntUser' value='" + document.getElementById("PrimIntUser").value + "'>";                        
-                        cell6.innerHTML = "<input type='button' value='-' class='btn' onclick='deleteRow(this)'/>";
-
-                        document.getElementById("stakeholderTypes").value = "";
-                        document.getElementById("stakeholderNames").value = "";
-                        document.getElementById("Purpose").value = "";
-                        document.getElementById("natureOfInvolvement").value = "";
-                        document.getElementById("PrimIntUser").value = "";
-                        document.getElementById("display").value = "";
-                        document.getElementById("display2").value = "";
-                        //document.getElementById("demoForm").reset();
-
-                    }
-                    function deleteRow(btn) {
-                        var row = btn.parentNode.parentNode;
-                        row.parentNode.removeChild(row);
-                    }             
-                </script>
                 <br>
                 <!--From template page-->
                 <div class="container footer">
@@ -370,7 +299,9 @@
                         target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbspFAQs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</a>
                     <a href="https://www.evalacademy.com/contact" target="_blank">Contact Us</a>
                 </div>
-
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

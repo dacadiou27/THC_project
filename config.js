@@ -2,8 +2,9 @@
 module.exports = {
     user: 'sa',
     password: 'BVC12345',
-    server: 'DESKTOP-JVT431S\\SQLEXPRESS01',
+    server: 'DANY_PC\\SQLEXPRESS',
     database: 'Eval',
+    
     port: 1433,
     options: {
         encrypt: true,
@@ -12,5 +13,10 @@ module.exports = {
 };
 
 //'NELSON\\SQLEXPRESS'
-//'DESKTOP-JVT431S\\SQLEXPRESS01'
+
+//'DESKTOP-JVT431S\\SQLEXPRESS01', 
+
 //'DANY_PC\\SQLEXPRESS'
+
+//'ACERLAPTOP\\SQLEXPRESS'
+
